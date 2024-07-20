@@ -206,7 +206,7 @@ const Works = () => {
         >
           <p className="font-machina text-xs uppercase">
             My scripting expertise covers developing custom scripts to automate
-            various tasks and processes. Whether it's data manipulation, system
+            various tasks and processes. Whether its data manipulation, system
             monitoring, or task automation, I create scripts that enhance
             efficiency and reduce manual workload. My scripting solutions are
             designed to be robust, scalable, and easy to integrate into existing
