@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 const BentoGrid = () => {
   return (
     <>
-      <div className="container max-w-[1440px] mx-auto h-[50px] mb-4 flex justify-end items-center text-xl">
+      <div className="container max-w-[1440px] mx-auto h-[50px] -mt-16 lg:mt-16 mb-4 flex justify-end items-center text-xl">
         <motion.h2
           initial={{ opacity: 0, translateX: 30 }}
           whileInView={{ opacity: 1, translateX: 0 }}

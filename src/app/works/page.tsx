@@ -40,21 +40,58 @@ const midVariant = {
   },
 };
 
+const titleVariant = {
+  hidden: { opacity: 0, x: -50 },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      ease: [0.33, 1, 0.68, 1],
+      duration: 0.9,
+    },
+  },
+};
+
+const titleVariantRight = {
+  hidden: { opacity: 0, x: 50 },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      ease: [0.33, 1, 0.68, 1],
+      duration: 0.9,
+    },
+  },
+};
+
 const Works = () => {
   return (
     <>
-      <div className="container max-w-[1440px] mb-10 text-white h-auto mx-auto gap-5 min-h-screen grid grid-cols-4  lg:grid-cols-12 lg:grid-rows-20">
-        <motion.div
-          variants={leftVariant}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.5 }}
-          className=" col-span-4   row-start-1  col-start-1 lg:h-[1010px]  lg:col-span-3 lg:row-span-8 text-white rounded-xl flex justify-center items-center"
-        >
-          <h1 className="lg:tracking-wide text-7xl lg:text-9xl font-monument font-extrabold lg:-rotate-90 text-center text-gray-300 ">
-            MY WORKS
+      <div className="container max-w-[1440px] mb-10 text-white h-auto mx-auto gap-5 min-h-screen grid grid-cols-4 lg:mt-16  lg:grid-cols-12 lg:grid-rows-20">
+        <div className=" col-span-4   row-start-1  col-start-1 lg:h-[1010px]  lg:col-span-3 lg:row-span-8 text-white rounded-xl flex justify-center items-center">
+          <h1 className="lg:tracking-wide text-7xl lg:text-9xl font-monument font-extrabold lg:-rotate-90 text-center text-gray-300 uppercase ">
+            <span>
+              <motion.div
+                variants={titleVariant}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.5 }}
+              >
+                my
+              </motion.div>
+            </span>
+            <span>
+              <motion.div
+                variants={titleVariantRight}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.5 }}
+              >
+                works
+              </motion.div>
+            </span>
           </h1>
-        </motion.div>
+        </div>
         <motion.div
           variants={rightVariant}
           initial="hidden"
@@ -122,7 +159,7 @@ const Works = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}
-          className="p-2 col-span-4 lg:col-span-2 lg:row-span-4 lg:col-start-1 lg:row-start-9 rounded-2xl bg-green-500"
+          className="p-2 col-span-4 lg:col-span-2 lg:row-span-4 lg:col-start-1 lg:row-start-9 rounded-2xl bg-orange-500"
         >
           <p className="font-machina text-xs uppercase">
             My product listing work involves creating detailed and optimized
@@ -186,7 +223,7 @@ const Works = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}
-          className="p-2 row-start-9 col-span-4 lg:col-span-6 lg:row-span-1 rounded-2xl bg-orange-500"
+          className="p-2 row-start-9 col-span-4 lg:col-span-6 lg:row-span-1 rounded-2xl bg-red-500"
         >
           <p className="font-machina text-xs uppercase">
             In my data entry projects, I leverage automation to enhance accuracy
@@ -202,7 +239,7 @@ const Works = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}
-          className="p-2 col-span-4 lg:col-span-6 lg:row-span-1  rounded-2xl bg-violet-500"
+          className="p-2 col-span-4 lg:col-span-6 lg:row-span-1 rounded-2xl bg-blue-600"
         >
           <p className="font-machina text-xs uppercase">
             My scripting expertise covers developing custom scripts to automate
