@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const BentoGrid = () => {
   return (
@@ -129,9 +130,11 @@ const BentoGrid = () => {
           transition={{ duration: 0.9, ease: [0.33, 1, 0.68, 1] }}
           className="col-span-4 lg:col-span-12 lg:row-start-13 border-2 h-[70px] lg:h-[75px] rounded-xl flex items-center px-3 text-2xl"
         >
-          <h2 className="text-white font-monument font-regular text-xs lg:text-2xl">
-            DISCOVER MORE WORKS
-          </h2>
+          <Link href="/works">
+            <h2 className="text-white font-monument font-regular text-xs lg:text-2xl">
+              DISCOVER MORE WORKS
+            </h2>
+          </Link>
         </motion.div>
       </div>
     </>

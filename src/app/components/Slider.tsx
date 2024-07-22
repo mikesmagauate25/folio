@@ -2,6 +2,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import { motion, Variants } from "framer-motion";
 import Card from "./Card";
+import Link from "next/link";
 
 interface ExpertiseItem {
   img: string;
@@ -132,7 +133,9 @@ const Slider: React.FC = () => {
         variants={childVariants}
         className="w-full h-[75px] flex justify-start items-center px-3 text-2xl border-2 font-monument rounded-xl font-regular text-white mt-5"
       >
-        <p className="text-xs lg:text-2xl">DISCOVER ABOUT ME</p>
+        <Link href="/about">
+          <p className="text-xs lg:text-2xl">DISCOVER ABOUT ME</p>
+        </Link>
       </motion.div>
     </div>
   );
