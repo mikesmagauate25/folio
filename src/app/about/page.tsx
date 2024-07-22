@@ -29,7 +29,7 @@ const titleVariantRight = {
 
 const About = () => {
   return (
-    <section className="container min-h-screen max-w-[1440px] mx-auto mt-10 overflow-x-hidden ">
+    <section className="container min-h-screen max-w-[1440px] mx-auto mt-10 overflow-hidden ">
       <div className="container  flex flex-col lg:flex-row justify-center items-center ">
         <div className="  w-[300px] lg:min-h-screen flex justify-center items-center text-white ">
           <h1 className="lg:tracking-wide text-7xl lg:text-9xl font-monument font-extrabold lg:-rotate-90 text-center text-gray-300 uppercase ">
