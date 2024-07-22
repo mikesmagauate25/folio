@@ -17,7 +17,7 @@ const Card = ({ image, title, description }: Props) => {
           height={100}
           className="rounded-xl w-10 h-10 lg:w-20 lg:h-20"
         />
-        <h2 className="text-white font-monument font-regular uppercase text-sm lg:text-3xl mt-5 ">
+        <h2 className="text-[#D0EE36] font-monument font-regular uppercase text-sm lg:text-3xl mt-5 ">
           {title}
         </h2>
       </div>

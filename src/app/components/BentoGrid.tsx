@@ -16,13 +16,13 @@ const BentoGrid = () => {
           STUFF THAT I DO
         </motion.h2>
       </div>
-      <div className="grid grid-cols-4 grid-rows-6 gap-2  lg:grid-cols-12 lg:grid-rows-12 lg:gap-4 max-w-[1440px] mx-auto">
+      <div className=" grid grid-cols-4 grid-rows-4 gap-2  lg:grid-cols-12 lg:grid-rows-12 lg:gap-4 max-w-[1440px] mx-auto">
         <motion.div
           initial={{ opacity: 0, translateX: -30 }}
           whileInView={{ opacity: 1, translateX: 0 }}
           viewport={{ once: true, amount: 0.5 }}
           transition={{ duration: 0.9, ease: [0.33, 1, 0.68, 1] }}
-          className="col-span-2 row-span-2 lg:col-span-4 lg:row-span-8 overflow-hidden rounded-xl group "
+          className="col-span-2 row-span-2 lg:col-span-4 lg:row-span-8 overflow-hidden rounded-xl group relative "
         >
           <Image
             className="w-full h-full  object-fill transform group-hover:scale-110 transition-transform duration-300"
@@ -31,6 +31,10 @@ const BentoGrid = () => {
             height={832}
             alt="UI/UX"
           />
+
+          <div className="absolute top-5 text-xs lg:text-2xl  rotate-12 right-3 bg-[#D0EE36] font-monument p-2">
+            UI/UX DESIGN
+          </div>
         </motion.div>
         <motion.div
           initial={{ opacity: 0, translateX: 30 }}
@@ -46,13 +50,17 @@ const BentoGrid = () => {
             height={467}
             alt="A+ Content"
           />
+
+          <div className="absolute bottom-0 text-xs lg:text-2xl left-0 bg-[#D0EE36] font-monument p-2">
+            A+ CONTENT
+          </div>
         </motion.div>
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true, amount: 0.5 }}
           transition={{ duration: 0.9, ease: [0.33, 1, 0.68, 1] }}
-          className="col-span-2 row-span-1 lg:col-span-4 lg:row-span-4 lg:col-start-5 lg:row-start-5 overflow-hidden rounded-xl group"
+          className="col-span-2 row-span-1 lg:col-span-4 lg:row-span-4 lg:col-start-5 lg:row-start-5 overflow-hidden rounded-xl group relative"
         >
           <Image
             className="w-full h-full object-cover object-center transform group-hover:scale-110 transition-transform duration-300"
@@ -61,6 +69,9 @@ const BentoGrid = () => {
             height={300}
             alt="coding"
           />
+          <div className="absolute bottom-0 text-xs lg:text-2xl left-0 bg-[#D0EE36] font-monument p-2">
+            CODING
+          </div>
         </motion.div>
         <motion.div
           initial={{ opacity: 0, translateX: 30 }}
@@ -82,7 +93,7 @@ const BentoGrid = () => {
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true, amount: 0.5 }}
           transition={{ duration: 0.9, ease: [0.33, 1, 0.68, 1] }}
-          className="col-span-2 row-span-1 lg:col-span-5 lg:row-span-4 lg:col-start-4 lg:row-start-9 rounded-xl group overflow-hidden"
+          className="col-span-2 row-span-1 lg:col-span-5 lg:row-span-4 lg:col-start-4 lg:row-start-9 rounded-xl group overflow-hidden relative"
         >
           <Image
             className="w-full h-full object-fill object-center transform group-hover:scale-110 transition-transform duration-300"
@@ -91,14 +102,26 @@ const BentoGrid = () => {
             height={462}
             alt="product listing"
           />
+
+          <div className="absolute bottom-0 text-xs lg:text-2xl left-0 bg-[#D0EE36] font-monument p-2">
+            product listing
+          </div>
         </motion.div>
         <motion.div
           initial={{ opacity: 0, translateX: -30 }}
           whileInView={{ opacity: 1, translateX: 0 }}
           viewport={{ once: true, amount: 0.5 }}
           transition={{ duration: 0.9, ease: [0.33, 1, 0.68, 1] }}
-          className="col-span-4 row-span-1 lg:col-span-3 lg:row-span-4 lg:col-start-1 lg:row-start-9 bg-orange-500 rounded-xl"
-        ></motion.div>
+          className="flex flex-col justify-center items-start p-5 gap-10 col-span-4 row-span-1 lg:col-span-3 lg:row-span-4 lg:col-start-1 lg:row-start-9 bg-orange-500 rounded-xl"
+        >
+          <h3 className="font-monument text-white uppercase">#A+ content</h3>
+          <h3 className="font-monument text-white uppercase">#UI/UX DESIGN</h3>
+          <h3 className="font-monument text-white uppercase">
+            #product listing
+          </h3>
+          <h3 className="font-monument text-white uppercase">#script coding</h3>
+          <h3 className="font-monument text-white uppercase">#data entry</h3>
+        </motion.div>
         <motion.div
           initial={{ opacity: 0, translateY: 30 }}
           whileInView={{ opacity: 1, translateY: 0 }}

@@ -10,7 +10,8 @@ const CallToAction: React.FC = () => {
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
-      const newRotation = scrollY * 0.1;
+      const newRotation = scrollY * 0.01;
+
       setRotation(newRotation);
     };
 
@@ -22,7 +23,7 @@ const CallToAction: React.FC = () => {
   }, []);
 
   return (
-    <div className="container max-w-[1440px] flex flex-col justify-center mx-auto min-h-screen -mt-64 lg:mt-20">
+    <div className="container max-w-[1440px] flex flex-col justify-center mx-auto min-h-screen  -mt-40 lg:mt-20">
       <p className="text-white font-monument text-xs lg:text-2xl">
         Whether Its a Minor or Major Task
       </p>
