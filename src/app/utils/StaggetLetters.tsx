@@ -3,12 +3,25 @@
 import { useState } from "react";
 import { easeInOut, motion } from "framer-motion";
 
-const firstLetterVariant = {
-  initial: { y: 0, transition: { duration: 0.2 } },
+const letterVariant = {
+  initial: { y: 0 },
+  animate: { y: -36, transition: { duration: 0.3, ease: easeInOut } },
+  exit: { y: 0, transition: { duration: 0.3, ease: easeInOut } },
+};
+
+const containerVariant = {
+  initial: {},
   animate: {
-    y: -36,
     transition: {
-      ease: easeInOut, //use this instead of delay
+      staggerChildren: 0.05,
+      when: "beforeChildren",
+    },
+  },
+  exit: {
+    transition: {
+      staggerChildren: 0.05,
+      staggerDirection: -1, // Reverse stagger for exit
+      when: "afterChildren",
     },
   },
 };
@@ -20,28 +33,34 @@ const StraggerLetters = ({ text }: { text: string }) => {
 
   return (
     <div
-      className="h-[25px]  overflow-hidden  "
-      onMouseEnter={() => setHover((prev) => !prev)}
-      onMouseLeave={() => setHover((prev) => !prev)}
+      className="h-[25px] overflow-hidden"
+      onMouseEnter={() => setHover(true)}
+      onMouseLeave={() => setHover(false)}
     >
       <motion.div
-        variants={firstLetterVariant}
+        variants={containerVariant}
         initial="initial"
-        animate={hovering ? "animate" : "initial"}
-        className="cursor-pointer"
+        animate={hovering ? "animate" : "exit"}
+        exit="exit"
+        className="cursor-pointer flex"
       >
         {letters.map((letter, index) => (
-          <motion.span key={index}>{letter}</motion.span>
+          <motion.div key={index} variants={letterVariant}>
+            {letter}
+          </motion.div>
         ))}
       </motion.div>
       <motion.div
-        variants={firstLetterVariant}
+        variants={containerVariant}
         initial="initial"
-        animate={hovering ? "animate" : "initial"}
-        className="mt-3"
+        animate={hovering ? "animate" : "exit"}
+        exit="exit"
+        className="mt-3 text-[#D0EE36] flex"
       >
         {letters.map((letter, index) => (
-          <motion.span key={index}>{letter}</motion.span>
+          <motion.div key={index} variants={letterVariant}>
+            {letter}
+          </motion.div>
         ))}
       </motion.div>
     </div>
