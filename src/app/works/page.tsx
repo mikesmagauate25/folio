@@ -66,10 +66,10 @@ const titleVariantRight = {
 
 const Works = () => {
   return (
-    <>
+    <div className="overflow-x-hidden">
       <div className="container max-w-[1440px] mb-10 text-white h-auto mx-auto gap-5 min-h-screen grid grid-cols-4 lg:mt-16  lg:grid-cols-12 lg:grid-rows-20">
         <div className=" col-span-4   row-start-1  col-start-1 lg:h-[1010px]  lg:col-span-3 lg:row-span-8 text-white rounded-xl flex justify-center items-center">
-          <h1 className="lg:tracking-wide text-7xl lg:text-9xl font-monument font-extrabold lg:-rotate-90 text-center text-gray-300 uppercase ">
+          <h1 className=" lg:tracking-wide text-7xl lg:text-9xl font-monument font-extrabold lg:-rotate-90 text-center text-gray-300 uppercase ">
             <span>
               <motion.div
                 variants={titleVariant}
@@ -252,7 +252,7 @@ const Works = () => {
         </motion.div>
       </div>
       <CallToAction />
-    </>
+    </div>
   );
 };
 

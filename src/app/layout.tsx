@@ -20,7 +20,7 @@ export default function RootLayout({
       <body className={`${monument.variable} ${machina.variable}`}>
         <HeaderNav />
         <main className="px-2">{children}</main>
-        <div className="px-2">
+        <div className="px-2 ">
           <Footers />
         </div>
       </body>

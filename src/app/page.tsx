@@ -5,7 +5,7 @@ import Slider from "./components/Slider";
 
 const Home = () => {
   return (
-    <div>
+    <div className="overflow-x-hidden">
       <HeroSection />
       <BentoGrid />
       <Slider />
