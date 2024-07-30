@@ -86,17 +86,21 @@ const About = () => {
             }}
             whileInView="true"
             viewport={{ once: true, amount: 0.5 }}
-            className="font-machina text-sm lg:w-3/4 uppercase "
+            className="font-machina text-xs lg:text-sm lg:w-3/4 uppercase "
           >
-            With over 2 years of experience as a virtual assistant and extensive
-            freelance work, I offer top-notch services to help you achieve your
-            digital goals. I specialize in web design, eCommerce listing, data
-            entry, and programming, providing fast, efficient, and accurate
-            solutions tailored to your needs. My broad experience ensures I can
-            handle a variety of tasks with precision and creativity. Whether
-            you&apos;re looking to enhance user experience, streamline
-            operations, or bring your digital projects to life, I&apos;m here to
-            support your ambitions and deliver exceptional results.
+            With over 4 years of experience as a Virtual Assistant in the
+            freelance industry, I have developed a comprehensive and versatile
+            skill set. This allows me to excel in both minor and major tasks
+            assigned to me with speed, accuracy, and a keen eye for detail. My
+            expertise encompasses a wide range of areas, including web design,
+            eCommerce listing, data entry, and programming. I am adept at
+            managing multiple projects simultaneously, ensuring that each task
+            is completed efficiently and to the highest standard. My strong
+            organizational skills, combined with a proactive approach, enable me
+            to anticipate client needs and deliver exceptional results. Whether
+            it&apos;s enhancing user experiences, streamlining processes, or
+            maintaining meticulous records, I bring a dedicated and professional
+            attitude to every project I undertake.
           </motion.p>
         </div>
       </div>
